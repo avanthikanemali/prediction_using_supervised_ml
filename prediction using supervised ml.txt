@@ -1,0 +1,17 @@
+>url<-"https://raw.githubusercontent.com/AdiPersonalWorks/Random/master/student_scores%20-%20student_scores.csv"
+> data=read.csv(url)
+> summary(data)
+> names(data)
+> head(data)
+> head(data)
+> any(is.na(data))
+> x=data$Hours
+> z=data$Scores
+> plot(x~z)
+> abline(lm(x~z))
+> model<-lm(z~x)
+> score.prediction<-predict(model,data)
+> print(score.prediction)
+> value<-data.frame(x=9.25)
+> dataprediction<-predict(model,value)
+> print(dataprediction)
